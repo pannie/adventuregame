@@ -1,0 +1,59 @@
+body {
+    background-color: #333;
+    font-family: Arial, Helvetica, sans-serif
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+ 
+/* Header Balk */
+header {
+    background-color: #333;
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+    display: table;
+    
+ }
+
+/* Header Text */
+header button {
+    color: black;
+    background-color: red;
+    border: grey; 
+    padding: 14px 16px; 
+    font-size: 17px;
+    display: inline-block;
+    float: none;
+    text-decoration: none;
+    outline: none;
+
+}
+
+
+
+
+
+
+/* footer balk */
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 20px;
+    width: 100%;
+    background: red;
+  }
+
+  /* Footer Text*/
+  footer p {
+    color: white;
+    text-align: center;
+    font-size: 15px;
+    }   
+
+
+
