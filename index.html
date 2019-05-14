@@ -12,7 +12,7 @@
             //Restart actief
             function start() {
 
-                document.getElementById("plaatje").src = "https://www.newshub.co.nz/home/new-zealand/2017/03/fight-for-survival-in-fire-service-s-burning-house/_jcr_content/par/video/image.dynimg.1280.q75.jpg/v1490082589678/house-fire-virtual-reality-SUPPLIED-new-zealand-fire-service-210317-1120.jpg";
+                document.getElementById("plaatje").src = "./img/vuur.jpg";
                 document.getElementById("rendoorvuur").style.display = "inline";  
                 document.getElementById("pakjetelefoon").style.display = "inline";
                 document.getElementById("springuitraam").style.display = "inline";  
@@ -24,7 +24,7 @@
             }
 
             // Spring uit raam actief
-            function sprintUitRaam() {
+            function springuitraam() {
                 document.getElementById("rendoorvuur").style.display = "none";  
                 document.getElementById("pakjetelefoon").style.display = "none";
                 document.getElementById("springuitraam").style.display = "none"; 
@@ -34,7 +34,7 @@
                 // 50% dood / levend 
 
                 if (Math.random() > 0.5) {
-                    document.getElementById("plaatje").src = "https://i.ytimg.com/vi/Kr9rIx7MVvg/maxresdefault.jpg";
+                    document.getElementById("plaatje").src = "./img/died.jpg";
                     document.getElementById("opnieuw").style.display = "inline"; 
                     document.getElementById("schreeuw").style.display = "none"; 
 
@@ -42,7 +42,7 @@
                 }
                 
                 else {
-                    document.getElementById("plaatje").src = "http://slideplayer.nl/slide/1889683/7/images/1/Hoe+heb+jij+het+overleefd....jpg";
+                    document.getElementById("plaatje").src = "./img/overleeft.jpg";
                     document.getElementById("opnieuw").style.display = "inline"; 
                     document.getElementById("schreeuw").style.display = "none"; 
 
@@ -58,7 +58,7 @@
                 document.getElementById("springuitraam").style.display = "none";  
                 document.getElementById("pakjetelefoon").style.display = "none";  
                 document.getElementById("rendoorvuur").style.display = "none";  
-                document.getElementById("plaatje").src = "https://i.ytimg.com/vi/Kr9rIx7MVvg/maxresdefault.jpg";
+                document.getElementById("plaatje").src = "./img/died.jpg";
                 document.getElementById("opnieuw").style.display = "inline"; 
                 document.getElementById("schreeuw").style.display = "none"; 
                 window.alert("Hoe denk je dit te overleven?")
@@ -67,7 +67,7 @@
 
         // Pakjetelefoon actief
             function pakJeTelefoon() {
-                document.getElementById("plaatje").src = "https://images.pond5.com/brave-firemen-inside-burning-building-footage-074901299_prevstill.jpeg";
+                document.getElementById("plaatje").src = "./img/blus.jpeg";
                 document.getElementById("springuitraam").style.display = "none"; 
                 document.getElementById("rendoorvuur").style.display = "none";  
                 var telefoonNummer = window.prompt("Voer telefoon nummer in");
@@ -86,7 +86,7 @@
                     document.getElementById("pakjetelefoon").style.display = "none";  
                     document.getElementById("opnieuw").style.display = "inline"; 
                     document.getElementById("schreeuw").style.display = "none"; 
-                    document.getElementById("plaatje").src = "https://i.ytimg.com/vi/Kr9rIx7MVvg/maxresdefault.jpg";
+                    document.getElementById("plaatje").src = "./img/died.jpg";
                 }
             }
             
@@ -95,14 +95,14 @@
                 document.getElementById("wachtaf").style.display = "none";
                 document.getElementById("springopvuur").style.display = "none"; 
                 document.getElementById("opnieuw").style.display = "inline";  
-                document.getElementById("plaatje").src = "https://i.etsystatic.com/16750179/r/il/3a9bd0/1567589293/il_fullxfull.1567589293_60bd.jpg";
+                document.getElementById("plaatje").src = "./img/win.jpg";
                 document.getElementById("schreeuw").style.display = "none"; 
 
             
                     }
         // Springopvuur actief 
             function springOpVuur() {
-                document.getElementById("plaatje").src = "https://i.ytimg.com/vi/Kr9rIx7MVvg/maxresdefault.jpg";
+                document.getElementById("plaatje").src = "./img/died.jpg";
                 document.getElementById("wachtaf").style.display = "none";
                 document.getElementById("springopvuur").style.display = "none"; 
                 document.getElementById("opnieuw").style.display = "inline"; 
@@ -138,14 +138,16 @@
         </div>
 
         <!--Center-->
+
         <div style="text-align: center;">
-            <img id="plaatje"
-            >
+            <p id="tekstboven"> OVERLEEF DE BRAND</p>
+
+            <img id="plaatje">
 
         </div>
         
         <!--Footer-->
-       <div class="footer"> <footer><p>@Jan Pruijs 2019</p></footer> <div>
+        <footer><p>@Jan Pruijs 2019</p></footer>
 
     </body>
 </html>
