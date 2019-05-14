@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
     <head> 
-            <title>KunstSiteJan</title>
+            <title>OVERLEEFDEBRAND</title>
             <link rel="stylesheet" type="text/css" href="overleefbrand.css">
             <meta name="viewport" content="width=device-width, initial-scale=1">
             
+        <!--Javascript-->
 
             <script>
 
+                //Restart actief
                     function start() {
 
                         document.getElementById("plaatje").src = "https://www.newshub.co.nz/home/new-zealand/2017/03/fight-for-survival-in-fire-service-s-burning-house/_jcr_content/par/video/image.dynimg.1280.q75.jpg/v1490082589678/house-fire-virtual-reality-SUPPLIED-new-zealand-fire-service-210317-1120.jpg";
@@ -17,50 +19,63 @@
                         document.getElementById("springopvuur").style.display = "none"; 
                         document.getElementById("wachtaf").style.display = "none";
                         document.getElementById("opnieuw").style.display = "none"; 
+                        document.getElementById("schreeuw").style.display = "inline";  
 
                     }
 
-
+                // Spring uit raam actief
                     function springuitraam() {
                         document.getElementById("rendoorvuur").style.display = "none";  
                         document.getElementById("pakjetelefoon").style.display = "none";
-                        document.getElementById("springuitraam").style.display = "none";  
-
-
+                        document.getElementById("springuitraam").style.display = "none"; 
+                        document.getElementById("schreeuw").style.display = "none"; 
+ 
                         
+                        // 50% dood / levend 
+
                         if (Math.random() > 0.5) {
                             document.getElementById("plaatje").src = "https://i.ytimg.com/vi/Kr9rIx7MVvg/maxresdefault.jpg";
                             document.getElementById("opnieuw").style.display = "inline"; 
+                            document.getElementById("schreeuw").style.display = "none"; 
 
+                            window.alert("Helaas je hebt pech, je bent doodgevallen.")
                         }
                         
                         else {
                             document.getElementById("plaatje").src = "http://slideplayer.nl/slide/1889683/7/images/1/Hoe+heb+jij+het+overleefd....jpg";
                             document.getElementById("opnieuw").style.display = "inline"; 
+                            document.getElementById("schreeuw").style.display = "none"; 
+
+                            window.alert("Je hebt gelukkig alleen je benen gebroken. Je hebt het overleefd.")
 
                         }
                             
                     }
 
+
+                // Rendoorvuur actief 
                     function rendoorvuur() {
                         document.getElementById("springuitraam").style.display = "none";  
                         document.getElementById("pakjetelefoon").style.display = "none";  
                         document.getElementById("rendoorvuur").style.display = "none";  
                         document.getElementById("plaatje").src = "https://i.ytimg.com/vi/Kr9rIx7MVvg/maxresdefault.jpg";
                         document.getElementById("opnieuw").style.display = "inline"; 
-
-
-
+                        document.getElementById("schreeuw").style.display = "none"; 
+                        window.alert("Hoe denk je dit te overleven?")
                     }
                     
+
+                // Pakjetelefoon actief
                     function pakjetelefoon() {
                         document.getElementById("plaatje").src = "https://images.pond5.com/brave-firemen-inside-burning-building-footage-074901299_prevstill.jpeg";
                         document.getElementById("springuitraam").style.display = "none"; 
                         document.getElementById("rendoorvuur").style.display = "none";  
-                        var telefoonNummer = window.prompt("Voer nummer in");
+                        var telefoonNummer = window.prompt("Voer telefoon nummer in");
                     
+
+                // Onderscheid 112 / ander nummer
                         if (telefoonNummer === '112') {
-                            alert("De politie is onderweg");
+                            alert("De brandweer is onderweg");
                             document.getElementById("pakjetelefoon").style.display = "none"; 
                             document.getElementById("wachtaf").style.display = "inline"; 
                             document.getElementById("springopvuur").style.display = "inline"; 
@@ -70,38 +85,45 @@
                             alert("Verkeerd nummer, de tijd raakt op. Je bent verbrand");
                             document.getElementById("pakjetelefoon").style.display = "none";  
                             document.getElementById("opnieuw").style.display = "inline"; 
-                            document.body.style.Image = "url('https://i.ytimg.com/vi/Kr9rIx7MVvg/maxresdefault.jpg')";
-
-
+                            document.getElementById("schreeuw").style.display = "none"; 
+                            document.getElementById("plaatje").src = "https://i.ytimg.com/vi/Kr9rIx7MVvg/maxresdefault.jpg";
                         }
                     }
-
+                    
+                // Wachtaf actief
                     function wachtaf() {
-                        document.getElementById("plaatje").src = "https://i.etsystatic.com/16750179/r/il/3a9bd0/1567589293/il_fullxfull.1567589293_60bd.jpg";
                         document.getElementById("wachtaf").style.display = "none";
                         document.getElementById("springopvuur").style.display = "none"; 
-                        document.getElementById("opnieuw").style.display = "inline"; 
+                        document.getElementById("opnieuw").style.display = "inline";  
+                        document.getElementById("plaatje").src = "https://i.etsystatic.com/16750179/r/il/3a9bd0/1567589293/il_fullxfull.1567589293_60bd.jpg";
+                        document.getElementById("schreeuw").style.display = "none"; 
 
-
-
-                    }
-
+                 
+                          }
+                // Springopvuur actief 
                     function springopvuur() {
                         document.getElementById("plaatje").src = "https://i.ytimg.com/vi/Kr9rIx7MVvg/maxresdefault.jpg";
                         document.getElementById("wachtaf").style.display = "none";
                         document.getElementById("springopvuur").style.display = "none"; 
                         document.getElementById("opnieuw").style.display = "inline"; 
+                        document.getElementById("schreeuw").style.display = "none"; 
 
+                        window.alert("Leuk geprobeerd. Maar je bent levend verbrand.")
                     }
 
+                // Schreeuw actief
+
+                    function schreeuw() {
+                        window.alert("Niemand hoort je...")
+
+                    }
                     
-
-
-
             </script>
     </head>
 
     <body onload="start()"> 
+
+
         <!--Header-->  
         <div class="header">
             <header> 
@@ -111,17 +133,19 @@
                     <button id="wachtaf" onclick="wachtaf()">WACHT AF</button>
                     <button id="springopvuur" onclick="springopvuur()">GA OP HET VUUR SPRINGEN</button>
                     <button id="opnieuw" onclick="start()">OPNIEUW</button>
+                    <button id="schreeuw" onclick="schreeuw()">SCHREEUW OM HULP</button>
+
 
 
             </header>
         </div>
 
-        <div style="text-align: center; margin-top: 100px;">
-            <img id="plaatje" style="width: 800px">
+        <!--Center-->
+        <div style="text-align: center;">
+            <img id="plaatje"
+            >
 
         </div>
-
-
         
         <!--Footer-->
        <div class="footer"> <footer><p>@Jan Pruijs 2019</p></footer> <div>

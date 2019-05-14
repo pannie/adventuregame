@@ -24,17 +24,23 @@ header button {
     color: black;
     background-color: red;
     border: grey; 
-    padding: 14px 16px; 
+    padding: 20px 24px; 
     font-size: 17px;
     display: inline-block;
     float: none;
     text-decoration: none;
     outline: none;
+    margin: 10px;
 
 }
 
+/* Plaatje style */
 
-
+#plaatje {
+  width: 1000px;
+  border: 18px solid black;
+  margin-top: 50px;
+}
 
 
 
