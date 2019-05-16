@@ -14,7 +14,7 @@
                 document.getElementById("plaatje").src = "./img/vuur.jpg";
                 document.getElementById("renDoorVuur").style.display = "inline";  
                 document.getElementById("pakJeTelefoon").style.display = "inline";
-                document.getElementById("springUitraam").style.display = "inline";  
+                document.getElementById("springUitRaam").style.display = "inline";  
                 document.getElementById("springOpVuur").style.display = "none"; 
                 document.getElementById("wachtAf").style.display = "none";
                 document.getElementById("opnieuw").style.display = "none"; 
@@ -25,7 +25,7 @@
             function springUitRaam() {
                 document.getElementById("renDoorVuur").style.display = "none";  
                 document.getElementById("pakJeTelefoon").style.display = "none";
-                document.getElementById("springUitraam").style.display = "none"; 
+                document.getElementById("springUitRaam").style.display = "none"; 
                 document.getElementById("schreeuw").style.display = "none"; 
 
                 
@@ -64,7 +64,7 @@
             // Pakjetelefoon actief
             function pakJeTelefoon() {
                 document.getElementById("plaatje").src = "./img/blus.jpeg";
-                document.getElementById("springUitraam").style.display = "none"; 
+                document.getElementById("springUitRaam").style.display = "none"; 
                 document.getElementById("renDoorVuur").style.display = "none";  
                 var telefoonNummer = window.prompt("Voer telefoon nummer in");
             
@@ -110,7 +110,7 @@
             function schreeuw() {
                 window.alert("Niemand hoort je...")
             }
-
+            
         </script>
     </head>
 
@@ -131,7 +131,7 @@
 
         <!--Center-->
         <div style="text-align: center;">
-            <p id="tekstboven"> OVERLEEF DE BRAND</p>
+            <p id="tekstBoven"> OVERLEEF DE BRAND</p>
             <img id="plaatje">
         </div>
         
