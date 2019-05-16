@@ -11,7 +11,6 @@
 
             //Restart actief
             function start() {
-
                 document.getElementById("plaatje").src = "./img/vuur.jpg";
                 document.getElementById("rendoorvuur").style.display = "inline";  
                 document.getElementById("pakjetelefoon").style.display = "inline";
@@ -20,7 +19,6 @@
                 document.getElementById("wachtaf").style.display = "none";
                 document.getElementById("opnieuw").style.display = "none"; 
                 document.getElementById("schreeuw").style.display = "inline";  
-
             }
 
             // Spring uit raam actief
@@ -32,17 +30,15 @@
 
                 
                 // 50% dood / levend 
-
                 if (Math.random() > 0.5) {
                     document.getElementById("plaatje").src = "./img/died.jpg";
                     document.getElementById("opnieuw").style.display = "inline"; 
                     document.getElementById("schreeuw").style.display = "none"; 
-
                     window.alert("Helaas je hebt pech, je bent doodgevallen.")
                 }
                 
                 else {
-                    document.getElementById("plaatje").src = "./img/overleeft.jpg";
+                    document.getElementById("plaatje").src = "./img/youdidit.jpg";
                     document.getElementById("opnieuw").style.display = "inline"; 
                     document.getElementById("schreeuw").style.display = "none"; 
 
@@ -53,7 +49,7 @@
             }
 
 
-        // Rendoorvuur actief 
+            // Rendoorvuur actief 
             function renDoorVuur() {
                 document.getElementById("springuitraam").style.display = "none";  
                 document.getElementById("pakjetelefoon").style.display = "none";  
@@ -65,7 +61,7 @@
             }
             
 
-        // Pakjetelefoon actief
+            // Pakjetelefoon actief
             function pakJeTelefoon() {
                 document.getElementById("plaatje").src = "./img/blus.jpeg";
                 document.getElementById("springuitraam").style.display = "none"; 
@@ -73,7 +69,7 @@
                 var telefoonNummer = window.prompt("Voer telefoon nummer in");
             
 
-        // Onderscheid 112 / ander nummer
+                // Onderscheid 112 / ander nummer
                 if (telefoonNummer === '112') {
                     alert("De brandweer is onderweg");
                     document.getElementById("pakjetelefoon").style.display = "none"; 
@@ -90,40 +86,36 @@
                 }
             }
             
-        // Wachtaf actief
+            // Wachtaf actief
             function wachtAf() {
                 document.getElementById("wachtaf").style.display = "none";
                 document.getElementById("springopvuur").style.display = "none"; 
                 document.getElementById("opnieuw").style.display = "inline";  
-                document.getElementById("plaatje").src = "./img/win.jpg";
+                document.getElementById("plaatje").src = "./img/youdidit.jpg";
                 document.getElementById("schreeuw").style.display = "none"; 
 
             
                     }
-        // Springopvuur actief 
+            // Springopvuur actief 
             function springOpVuur() {
                 document.getElementById("plaatje").src = "./img/died.jpg";
                 document.getElementById("wachtaf").style.display = "none";
                 document.getElementById("springopvuur").style.display = "none"; 
                 document.getElementById("opnieuw").style.display = "inline"; 
                 document.getElementById("schreeuw").style.display = "none"; 
-
                 window.alert("Leuk geprobeerd. Maar je bent levend verbrand.")
             }
 
-        // Schreeuw actief
-
+            // Schreeuw actief
             function schreeuw() {
                 window.alert("Niemand hoort je...")
-
             }
             
         </script>
     </head>
 
     <body onload="start()"> 
-
-
+        
         <!--Header-->  
         <div class="header">
             <header> 
@@ -138,12 +130,9 @@
         </div>
 
         <!--Center-->
-
         <div style="text-align: center;">
             <p id="tekstboven"> OVERLEEF DE BRAND</p>
-
             <img id="plaatje">
-
         </div>
         
         <!--Footer-->
