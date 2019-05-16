@@ -8,24 +8,24 @@
         <!--Javascript-->
 
         <script>
-
+            
             //Restart actief
             function start() {
                 document.getElementById("plaatje").src = "./img/vuur.jpg";
-                document.getElementById("rendoorvuur").style.display = "inline";  
-                document.getElementById("pakjetelefoon").style.display = "inline";
-                document.getElementById("springuitraam").style.display = "inline";  
-                document.getElementById("springopvuur").style.display = "none"; 
-                document.getElementById("wachtaf").style.display = "none";
+                document.getElementById("renDoorVuur").style.display = "inline";  
+                document.getElementById("pakjeTelefoon").style.display = "inline";
+                document.getElementById("springUitraam").style.display = "inline";  
+                document.getElementById("springOpVuur").style.display = "none"; 
+                document.getElementById("wachtAf").style.display = "none";
                 document.getElementById("opnieuw").style.display = "none"; 
                 document.getElementById("schreeuw").style.display = "inline";  
             }
 
             // Spring uit raam actief
-            function springuitraam() {
-                document.getElementById("rendoorvuur").style.display = "none";  
-                document.getElementById("pakjetelefoon").style.display = "none";
-                document.getElementById("springuitraam").style.display = "none"; 
+            function springUitRaam() {
+                document.getElementById("renDoorVuur").style.display = "none";  
+                document.getElementById("pakJeTelefoon").style.display = "none";
+                document.getElementById("springUitraam").style.display = "none"; 
                 document.getElementById("schreeuw").style.display = "none"; 
 
                 
@@ -51,9 +51,9 @@
 
             // Rendoorvuur actief 
             function renDoorVuur() {
-                document.getElementById("springuitraam").style.display = "none";  
-                document.getElementById("pakjetelefoon").style.display = "none";  
-                document.getElementById("rendoorvuur").style.display = "none";  
+                document.getElementById("springUitRaam").style.display = "none";  
+                document.getElementById("pakJeTelefoon").style.display = "none";  
+                document.getElementById("renDoorVuur").style.display = "none";  
                 document.getElementById("plaatje").src = "./img/died.jpg";
                 document.getElementById("opnieuw").style.display = "inline"; 
                 document.getElementById("schreeuw").style.display = "none"; 
@@ -64,22 +64,22 @@
             // Pakjetelefoon actief
             function pakJeTelefoon() {
                 document.getElementById("plaatje").src = "./img/blus.jpeg";
-                document.getElementById("springuitraam").style.display = "none"; 
-                document.getElementById("rendoorvuur").style.display = "none";  
+                document.getElementById("springUitraam").style.display = "none"; 
+                document.getElementById("renDoorVuur").style.display = "none";  
                 var telefoonNummer = window.prompt("Voer telefoon nummer in");
             
 
                 // Onderscheid 112 / ander nummer
                 if (telefoonNummer === '112') {
                     alert("De brandweer is onderweg");
-                    document.getElementById("pakjetelefoon").style.display = "none"; 
-                    document.getElementById("wachtaf").style.display = "inline"; 
-                    document.getElementById("springopvuur").style.display = "inline"; 
+                    document.getElementById("pakJeTelefoon").style.display = "none"; 
+                    document.getElementById("wachtAf").style.display = "inline"; 
+                    document.getElementById("springOpVuur").style.display = "inline"; 
                 } 
                 
                 else {
                     alert("Verkeerd nummer, de tijd raakt op. Je bent verbrand");
-                    document.getElementById("pakjetelefoon").style.display = "none";  
+                    document.getElementById("pakJeTelefoon").style.display = "none";  
                     document.getElementById("opnieuw").style.display = "inline"; 
                     document.getElementById("schreeuw").style.display = "none"; 
                     document.getElementById("plaatje").src = "./img/died.jpg";
@@ -88,8 +88,8 @@
             
             // Wachtaf actief
             function wachtAf() {
-                document.getElementById("wachtaf").style.display = "none";
-                document.getElementById("springopvuur").style.display = "none"; 
+                document.getElementById("wachtAf").style.display = "none";
+                document.getElementById("springOpVuur").style.display = "none"; 
                 document.getElementById("opnieuw").style.display = "inline";  
                 document.getElementById("plaatje").src = "./img/youdidit.jpg";
                 document.getElementById("schreeuw").style.display = "none"; 
@@ -99,8 +99,8 @@
             // Springopvuur actief 
             function springOpVuur() {
                 document.getElementById("plaatje").src = "./img/died.jpg";
-                document.getElementById("wachtaf").style.display = "none";
-                document.getElementById("springopvuur").style.display = "none"; 
+                document.getElementById("wachtAf").style.display = "none";
+                document.getElementById("springOpVuur").style.display = "none"; 
                 document.getElementById("opnieuw").style.display = "inline"; 
                 document.getElementById("schreeuw").style.display = "none"; 
                 window.alert("Leuk geprobeerd. Maar je bent levend verbrand.")
@@ -110,7 +110,7 @@
             function schreeuw() {
                 window.alert("Niemand hoort je...")
             }
-            
+
         </script>
     </head>
 
@@ -119,11 +119,11 @@
         <!--Header-->  
         <div class="header">
             <header> 
-                    <button id="springuitraam" onclick="springuitraam()">SPRING UIT HET RAAM</button>
-                    <button id="rendoorvuur" onclick="renDoorVuur()">REN DOOR HET VUUR</button>
-                    <button id="pakjetelefoon" onclick="pakJeTelefoon()">PAK JE TELEFOON</button>
-                    <button id="wachtaf" onclick="wachtAf()">WACHT AF</button>
-                    <button id="springopvuur" onclick="springOpVuur()">GA OP HET VUUR SPRINGEN</button>
+                    <button id="springUitRaam" onclick="springUitRaam()">SPRING UIT HET RAAM</button>
+                    <button id="renDoorVuur" onclick="renDoorVuur()">REN DOOR HET VUUR</button>
+                    <button id="pakJeTelefoon" onclick="pakJeTelefoon()">PAK JE TELEFOON</button>
+                    <button id="wachtAf" onclick="wachtAf()">WACHT AF</button>
+                    <button id="springOpVuur" onclick="springOpVuur()">GA OP HET VUUR SPRINGEN</button>
                     <button id="opnieuw" onclick="start()">OPNIEUW</button>
                     <button id="schreeuw" onclick="schreeuw()">SCHREEUW OM HULP</button>
             </header>
